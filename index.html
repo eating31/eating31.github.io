@@ -1,0 +1,68 @@
+<DOCTYPE!>
+<html>
+<head>
+<title>比特幣匯率轉換</title>
+<meta charset = "utf-8">
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<h2 align="center">比特幣轉換美金小工具</h2>
+
+<p align="center">
+匯率日期(YYYY-MM-DD)
+<input type="text" id="inputdate" placeholder="請輸入日期">
+<input type="text" id="inputmoney" placeholder="請輸入金額">比特幣
+<button onclick="Transfer()">轉換</button>為<span id = money></span>美金
+</p>
+
+<p id="test"></p>
+
+<table width="400" height="150" style="border: 3px #aaaaaa solid" align="center">
+    <tr align="center" style="background-color: lightgreen;"><td>當前匯率</td></tr>
+    <tr align="center"><td>1比特幣約 
+       <span id="bpirate"></span>
+        美金</td></tr>
+
+</table>
+
+
+
+<script language="javascript">
+
+function Transfer() {
+
+    var inputmoneyJS = document.getElementById("inputmoney").value
+    var inputdateJS = document.getElementById("inputdate").value
+    
+    var reg = /^(\d{4})-(\d{2})-(\d{2})$/;
+
+    if (inputmoneyJS == "" || isNaN(inputmoneyJS)){
+        alert('輸入金額錯誤!');
+        return false;
+    }else if (inputdateJS == "" || !reg.test(inputdateJS)&&RegExp.$2<=12&&RegExp.$3<=31 ){
+        alert('日期格式錯誤!');        
+        return false;
+    }else{
+
+    var url ="https://api.coindesk.com/v1/bpi/historical/close.json?start=" + inputdateJS+ "&end=" +inputdateJS;
+    fetch(url)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(mydata){
+            console.log(mydata);
+            console.log(mydata['bpi'][inputdateJS]);
+            rate = JSON.stringify(mydata['bpi'][inputdateJS]);
+            document.getElementById('bpirate').textContent = rate;
+            document.getElementById('money').textContent = rate*inputmoneyJS;
+        })
+        .catch(function(err){
+            alert("查無該日期匯率資料!")
+        });
+    }
+}
+</script>
+
+</body>
+</html>
