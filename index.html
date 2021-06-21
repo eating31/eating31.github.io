@@ -1,68 +1,130 @@
-<DOCTYPE!>
+<!DOCTYPE html>
 <html>
 <head>
-<title>比特幣匯率轉換</title>
-<meta charset = "utf-8">
-<link rel="stylesheet" href="mystyle.css">
+	<title>Profile</title>
+	<link rel="stylesheet" href="mystyle.css">
+    <meta charset="utf-8">
 </head>
 <body>
+<h2 id = "toptop">我的個人CV</h2>
 
-<h2 align="center">比特幣轉換美金小工具</h2>
+<div>
+    <ul class="top">
+	    <li class="dropdown">
+            <a href="#home" class="dropbtn">home</a>
+            <div class="dropdown-content">
+             	<a href="#about">about</a>
+                <a href="#resume">resume</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#Protfolio" class="dropbtn">Protfolio</a>
+            <div class="dropdown-content">
+                <a href="#Graphic">Graphic Design</a>
+                <a href="#Photo">Photo</a>
+                <a href="#Vedio">Vedio</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#contact" class="dropbtn"> Contact me </a>
+        </li>
+    </ul>
+</div>
 
-<p align="center">
-匯率日期(YYYY-MM-DD)
-<input type="text" id="inputdate" placeholder="請輸入日期">
-<input type="text" id="inputmoney" placeholder="請輸入金額">比特幣
-<button onclick="Transfer()">轉換</button>為<span id = money></span>美金
-</p>
-
-<p id="test"></p>
-
-<table width="400" height="150" style="border: 3px #aaaaaa solid" align="center">
-    <tr align="center" style="background-color: lightgreen;"><td>當前匯率</td></tr>
-    <tr align="center"><td>1比特幣約 
-       <span id="bpirate"></span>
-        美金</td></tr>
-
-</table>
 
 
+<section id="home">
+	<img src="img/about.jpg" width="100%" height="auto">
 
-<script language="javascript">
+	<div id="about">
+		<h3>簡介</h3>
+		<p>日安，我是鍾依庭。目前就讀中央資管系大二，就是資工加管理然後我兩邊都學不好: )
+		   <br>普妹。最普的那種，希望有朝一日能當水美眉^_^ 
+		   <br>我是射手座是唐老師說最近水逆的那種。
+		   <br>生平無大志，只求沒有事。
+		   <br>喜歡旅遊，但常常過的了海關過不了心裡那關。因爲我常常會遇到旅遊爛事(;´༎ຶД༎ຶ`)（飛機delay三小時
+		   <br>也喜歡打桌遊，之前有在桌遊店打工，但不太打手遊，參加過系女排、攝影社、但系上活動比較少參加（系邊還藉口一堆
+		   <br>這兩年花了很多時間在辯論社當爆肝工具人，總之興趣滿廣泛的～很開心認識大家
+		</p>
+		<a href="https://www.instagram.com/emmmmmma1201/" target="_blank"><img src="img/ig.jpg" width="20px" height="20px"> emmmmmma1201 </a>
+	</div>
+	<p id="resume">
+		<h3>簡歷</h3>
+		<ul>
+			<li>思辯格致社社長</li>
+			<li>南區大專院校辯論賽冠軍</li>
+			<li>貝克街桌遊</li>
+			<li>謀殺衛斯理工作室 美編兼主持人</li>
+			<li>魔法科學班 夏令營課程助教</li>
+			<li>東信文理補習班 數學輔導老師</li>
+		</ul>
+	</p>
 
-function Transfer() {
+</section>    
+	
+<section id="Protfolio">
+	<h3>作品集</h3>
+	<table>
+		<tr><td id="Graphic" colspan="2">平面設計</td></tr>
+		<tr><td colspan="2"><img src="img/g1.jpg" width="50%"></td></tr>
+		<tr><td id="Photo" colspan="2">攝影</td></tr>
+		<tr><td><img src="img/p1.jpg" width="50%"></td><td><img src="img/p2.jpg" width="50%"></td></tr>
+		<tr><td id="Vedio" colspan="2">影片</td></tr><tr>
+		<td>Coming soon...</td></tr>
+	</table>
 
-    var inputmoneyJS = document.getElementById("inputmoney").value
-    var inputdateJS = document.getElementById("inputdate").value
-    
-    var reg = /^(\d{4})-(\d{2})-(\d{2})$/;
+</section>
 
-    if (inputmoneyJS == "" || isNaN(inputmoneyJS)){
-        alert('輸入金額錯誤!');
-        return false;
-    }else if (inputdateJS == "" || !reg.test(inputdateJS)&&RegExp.$2<=12&&RegExp.$3<=31 ){
-        alert('日期格式錯誤!');        
-        return false;
-    }else{
+<section id="contact" >
+    <h3>Contact</h3>
 
-    var url ="https://api.coindesk.com/v1/bpi/historical/close.json?start=" + inputdateJS+ "&end=" +inputdateJS;
-    fetch(url)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(mydata){
-            console.log(mydata);
-            console.log(mydata['bpi'][inputdateJS]);
-            rate = JSON.stringify(mydata['bpi'][inputdateJS]);
-            document.getElementById('bpirate').textContent = rate;
-            document.getElementById('money').textContent = rate*inputmoneyJS;
-        })
-        .catch(function(err){
-            alert("查無該日期匯率資料!")
-        });
+    <div>
+       	<h4>Email Me</h4>
+       	<p>108403540@cc.ncu.edu.tw</p>
+       	<h4>Call Me</h4>
+        <p>0987 878 787</p>
+    </div>
+     
+    <div>     
+      <form action="check.php" method="post">
+        <div>
+          <div>
+            <input type="text" name="name" id="name" placeholder="Your Name" required>
+          </div>
+          <div >
+            <input type="email" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div >
+          <input type="text" name="subject" id="subject" placeholder="Subject" required>
+        </div>
+        <div >
+          <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div ><button type="submit" onClick="check()">Send Message</button></div>
+      </form>
+
+    </div>
+  </section>
+
+<p><a href="#toptop"> go back </a></p>
+
+<script type="text/javascript">
+
+    function check(){
+        if(a.name.value == "") 
+        {
+        	alert("未輸入姓名");
+        }else if(a.subject.value == ""){
+            alert("請輸入主旨");
+        }else if(a.email.value ==""){
+            alert("請輸入email");
+        }else if(a.message.value ==""){
+            alert("請輸入內容");
+        }else submit();
     }
-}
-</script>
+
+</SCRIPT>
 
 </body>
 </html>
