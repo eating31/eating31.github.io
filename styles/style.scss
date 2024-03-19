@@ -1,0 +1,290 @@
+$lightblue: #ADC6D5;
+$pink: #E8BAC0;
+$redpink: #E9979E;
+$bluegray: #E7EEF3;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    /* 初始状态：完全透明，向下位移 */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* 结束状态：完全不透明，不位移（正常位置） */
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: $lightblue;
+    /* 光标闪烁的颜色 */
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  overflow-x: hidden;
+
+  // background-color: #272727;
+  // color: white;
+
+  section.animation-wrapper {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+
+    section.animation {
+      margin-top: 10vh;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hero {
+        width: 100%;
+        height: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to right,$pink, $redpink);
+      z-index: -1;
+    }
+  }
+
+  .navbar{
+    z-index: 2;
+  }
+ 
+  main {
+    section.main-area {
+      min-height: 60vh;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      div.info {
+        flex-basis: 500px;
+        padding: 1rem;
+
+        h1 {
+          font-size: 2.5rem;
+
+          //type-effect
+          display: inline-block;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 0.15em solid transparent;
+          animation: typing 2.5s 2.2s steps(40, end), blink-caret 2.5s 2.2s steps(40, end);
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        a {
+          color: white;
+          //background-color: rgb(54, 212, 138);
+          padding: 0.25rem 0.5rem;
+          font-size: 1.5rem;
+          border-radius: 20px;
+          display: inline-block;
+          margin-top: 2rem;
+          text-decoration: none;
+          transition: all 0.2s ease;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      div.img-area {
+        flex-basis: 500px;
+
+        // animation
+        opacity: 0;
+        animation: fadeIn 1.5s 2.2s ease-in-out forwards;
+        /* 设置动画名称、时间和动画结束后保持最终状态 */
+        transform: translateY(50px);
+
+        img {
+          width: 100%;
+          padding: 20px;
+        }
+      }
+    }
+
+    section.about-me {
+      background-color: #E8BAC0;
+      padding: 3rem 0rem;
+      display: flex;
+      justify-content: center;
+
+      section.description {
+        width: 60%;
+        text-align: center;
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        .progress-bar-area {
+          p {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+
+    section.myproject {
+
+      padding: 3rem 0rem;
+
+      h2 {
+        text-align: center;
+      }
+
+      .project {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .card {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        .animate {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .frontend {
+          background-color: $lightblue;
+        }
+
+        .backend {
+          background-color: $pink;
+        }
+
+      }
+
+      div img {
+        max-height: 250px;
+        height: auto;
+      }
+    }
+
+    section.article {
+      padding: 3rem 0;
+      .card{
+        background-color: $bluegray;
+      }
+      .btn{
+        
+       background-color: #ADC6D5;
+       color: white;
+       --bs-btn-border-width:none;
+      }
+    }
+  }
+}
+
+
+
+footer {
+  background-color: black;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  height: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    main {
+      section.about-me {
+        section.description {
+          width: 80%;
+        }
+      }
+
+      section.resume {
+        overflow-x: auto;
+
+        section.picture {
+
+          div.greenRect,
+          div.greenRect2,
+          div.greenRect3 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    nav {
+      position: static;
+
+      ul {
+        flex-direction: column;
+      }
+    }
+
+  }
+}

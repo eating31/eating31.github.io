@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emma's Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/bubble.css" />
+  </head>
+
+  <body>
+    <!-- 開場動畫 -->
+    <section class="animation-wrapper">
+      <section class="animation">
+        <div class="hero">
+          <img src="./pictures/profile.png" alt="math image" id="heroImage" />
+      </section>
+      <div class="slider"></div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-white">
+      <div class="container-fluid px-4">
+        <button
+          class="navbar-toggler my-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-3">
+              <a class="nav-link active" href="#profile">Profile</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#project">Project</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#article">Article</a>
+            </li>
+            <li class="nav-item px-3 dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Game
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="game/snake/snake.html"
+                    >Snake game</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="game/ball/index.html"
+                    >Ball game</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div id="background-wrap">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x10"></div>
+      </div>
+
+      <section class="main-area" id="profile">
+        <div class="img-area">
+          <img src="./pictures/photo1.png" alt="個人照片" />
+        </div>
+        <div class="info">
+          <h1 id="animated-heading">Bonjour, I'm Emma !</h1>
+          <h2 style="line-height: 1.5em">
+            <!-- A software developer who loves surging and surfing. -->
+            Boasting three years of front-end development experience and two
+            years of back-end development experience, I am dedicated to crafting
+            high-quality and robust websites and applications.
+          </h2>
+          <a target="_blank" href="https://github.com/eating31"
+            ><img src="./pictures/github.png" alt="github" width="50"
+          /></a>
+          <a
+            target="_blank"
+            href="http://linkedin.com/in/yi-ting-chung-37a13223a/"
+            ><img src="./pictures/LinkedIn.png" alt="linkin" width="50"
+          /></a>
+          <a
+            target="_blank"
+            href="https://instagram.com/emmmmmma1201?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
+            ><img src="./pictures/ig.png" alt="IG" width="50"
+          /></a>
+        </div>
+      </section>
+      <section class="about-me">
+        <section class="description">
+          <h2>About me</h2>
+          <p>
+            Graduting from National Central Univerity with a bachelor in
+            Management Information System. I have lots of insterests and a a
+            fearless propensity for stepping out of my comfort zone. My two
+            pivotal experiences in Lyon, France, as an exchange student, and my
+            leadership role in the debating club have significantly contributed
+            to my effective communication skills and my insatiable appetite for
+            acquiring new knowledge. Additionally, these experiences played a
+            key role in my team's victory at the 2023 national debate
+            championship.
+          </p>
+          <div class="text-start pt-2 fw-bold">
+            <ul>
+              <li>
+                Frontend : Vue3, React, CSS, JavaScript, Tailwinds, Bootstrap
+              </li>
+              <li>
+                Backend : Laravel, Django, Node.js, Python, Java, TypeScript,
+                PostgreSQL, Sequelize, MongoDB
+              </li>
+              <li>Devops : Docker, Git, Azure CI/CD, Jmeter</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section id="project" class="myproject">
+        <h2 class="pb-2">My Project</h2>
+        <div class="project">
+          <div class="card p-3 m-3" style="width: 30rem">
+            <div
+              id="carouselMafControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./pictures/maf1.png"
+                    class="d-block w-100"
+                    alt="1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/maf2.png"
+                    class="d-block w-100"
+                    alt="2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/maf4.png"
+                    class="d-block w-100"
+                    alt="4"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMafControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMafControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                TSF website - 2024 (Processing) &nbsp;&nbsp;
+                <a target="_blank" href="https://maf-frontend.onrender.com/">
+                  Visit
+                </a>
+              </h5>
+              <div class="card-text">
+                <ul>
+                  <li>
+                    Developed MERN-based, handling both front-end and back-end
+                    system.
+                  </li>
+                  <li>
+                    Implemented efficient backend management system for easy
+                    announcement creation and file uploads.
+                  </li>
+                  <li>
+                    Improved user experience by conducting stress testing with
+                    JMeter
+                  </li>
+                </ul>
+                <span class="badge rounded-pill frontend">React</span>
+                <span class="badge rounded-pill backend">Express</span>
+                <span class="badge rounded-pill backend">Node.js</span>
+                <span class="badge rounded-pill backend">MongoDB</span>
+                <span class="badge rounded-pill bg-warning">Jemter</span>
+              </div>
+            </div>
+          </div>
+          <div class="card p-3 m-3" style="width: 30rem">
+            <div
+              id="carouselOrderControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./pictures/order1.png"
+                    class="d-block w-100"
+                    alt="1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/order2.png"
+                    class="d-block w-100"
+                    alt="2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/order3.png"
+                    class="d-block w-100"
+                    alt="3"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/order4.png"
+                    class="d-block w-100"
+                    alt="4"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselOrderControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselOrderControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Order System(Intern) - 2024 (Privacy)</h5>
+              <div class="card-text">
+                <ul>
+                  <li>
+                    Developed a QR code-based ordering system enabling customers
+                    to place orders efficiently and a backend management system
+                    for restaurants
+                  </li>
+                  <li>
+                    Implemented WebSocket to facilitate real-time order
+                    notifications for restaurant staff on the backend system
+                  </li>
+                </ul>
+                <span class="badge rounded-pill frontend">React</span>
+                <span class="badge rounded-pill backend">Express</span>
+                <span class="badge rounded-pill backend">Node.js</span>
+                <span class="badge rounded-pill backend">Azure SQL</span>
+                <span class="badge rounded-pill bg-warning">Azure DevOps</span>
+              </div>
+            </div>
+          </div>
+          <div class="card p-3 m-3" style="width: 30rem">
+            <div
+              id="carouselExampleControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./pictures/fb1.png" class="d-block w-100" alt="1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./pictures/fb2.png" class="d-block w-100" alt="2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./pictures/fb3.png" class="d-block w-100" alt="3" />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <!-- <div class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="./pictures/fb1.png" class="d-block w-100" alt="1" />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="./pictures/fb2.png" class="d-block w-100" alt="2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./pictures/fb3.png" class="d-block w-100" alt="3" />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div> -->
+            <div class="card-body">
+              <h5 class="card-title">Facehook - 2023 (Side Project)</h5>
+              <div class="card-text">
+                <ul>
+                  <li>A social media platform based on 2010 Facebook</li>
+                  <li>
+                    Implemented real-time chat and post notifications by
+                    WebSocket.
+                  </li>
+                  <li>
+                    Social interaction features including posting, commenting,
+                    liking, etc., enhancing user engagement and interaction.
+                  </li>
+                </ul>
+                <span class="badge rounded-pill frontend">React</span>
+                <span class="badge rounded-pill frontend">Typescript</span>
+                <span class="badge rounded-pill backend">Express</span>
+                <span class="badge rounded-pill backend">Postgresql</span>
+                <span class="badge rounded-pill backend">TypeORM</span>
+              </div>
+            </div>
+          </div>
+          <div class="card p-3 m-3" style="width: 30rem">
+            <div
+              id="carouselAeroboxControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./pictures/aerobox1.png"
+                    class="d-block w-100"
+                    alt="1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/aerobox2.png"
+                    class="d-block w-100"
+                    alt="2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/aerobox3.png"
+                    class="d-block w-100"
+                    alt="3"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/aerobox4.png"
+                    class="d-block w-100"
+                    alt="4"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselAeroboxControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselAeroboxControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Aerobox System - 2023 (Privacy)</h5>
+              <div class="card-text">
+                <ul>
+                  <li>
+                    A comprehensive manage and monitor platform for the air
+                    quality sensor 'Aerobox', facilitating real-time data
+                    visualization and analysis
+                  </li>
+                  <li>
+                    Designed the platform using Clean Architecture principles
+                  </li>
+                  <li>Implemented JWT to enhance information security</li>
+                </ul>
+              </div>
+              <span class="badge rounded-pill frontend">Vue3</span>
+              <span class="badge rounded-pill frontend">Tailwinds</span>
+              <span class="badge rounded-pill backend">Express</span>
+              <span class="badge rounded-pill backend">Postgresql</span>
+              <span class="badge rounded-pill backend">Sequlize</span>
+              <span class="badge rounded-pill backend">gRPC</span>
+            </div>
+          </div>
+          <div class="card p-3 m-3" style="width: 30rem">
+            <div
+              id="carousel777Controls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./pictures/7771.png"
+                    class="d-block w-100"
+                    alt="1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/7772.png"
+                    class="d-block w-100"
+                    alt="2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/7773.png"
+                    class="d-block w-100"
+                    alt="3"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/7774.png"
+                    class="d-block w-100"
+                    alt="4"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carousel777Controls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carousel777Controls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                Lonelytime(Intern) - 2023&nbsp;&nbsp;
+                <a target="_blank" href="https://www.lonelytime777.com/">
+                  Visit
+                </a>
+              </h5>
+              <div class="card-text">
+                <ul>
+                  <li>The official website of the mobile game - Lonelytime</li>
+                  <li>
+                    Orchestrated the integration of payment processing systems,
+                    including MyCard and Gash
+                  </li>
+                  <li>Integrated Google, Facebook, Apple OAuth</li>
+                  <li>
+                    Integrated with PlayFab services to empower developers with
+                    powerful backend tools and analyticss.
+                  </li>
+                </ul>
+              </div>
+              <span class="badge rounded-pill frontend">React</span>
+              <span class="badge rounded-pill frontend">Bootstrap</span>
+              <span class="badge rounded-pill backend">Express</span>
+              <span class="badge rounded-pill bg-warning">Docker</span>
+              <span class="badge rounded-pill bg-warning">Devops</span>
+            </div>
+          </div>
+          <div class="card p-3 m-3" style="width: 30rem">
+            <div
+              id="carouselQAControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./pictures/qa1.png" class="d-block w-100" alt="1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./pictures/qa2.png" class="d-block w-100" alt="2" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./pictures/qa3.png" class="d-block w-100" alt="3" />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselQAControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselQAControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                NLP QA Gernerator - 2023 (Side Project)
+              </h5>
+              <div class="card-text">
+                <ul>
+                  <li>
+                    An interactive learning tool that enables users to practice
+                    English listening and writing skills
+                  </li>
+                  <li>
+                    Utilized Azure GPT-3.5-Turbo NLP model to generate question
+                    and provide composition feedback
+                  </li>
+                  <li>
+                    Generate visual charts and track users' learning process
+                  </li>
+                </ul>
+                <span class="badge rounded-pill frontend">React</span>
+                <span class="badge rounded-pill frontend">Daisy UI</span>
+                <span class="badge rounded-pill backend">Express</span>
+                <span class="badge rounded-pill bg-warning">NLP</span>
+              </div>
+            </div>
+          </div>
+          <div class="card p-3 m-3" style="width: 30rem">
+            <div
+              id="carouselEduControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./pictures/edu1.png"
+                    class="d-block w-100"
+                    alt="1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/edu2.png"
+                    class="d-block w-100"
+                    alt="2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/edu3.png"
+                    class="d-block w-100"
+                    alt="3"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselEduControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselEduControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                Education Management System - 2022 (Privacy)
+              </h5>
+              <div class="card-text">
+                <ul>
+                  <li>A visualization data and management system</li>
+                  <li>
+                    Handles large data with Bulkinsert to improve user
+                    experience
+                  </li>
+                  <li>
+                    Deployed to a virtual machine server using SSH and Docker
+                  </li>
+                </ul>
+                <span class="badge rounded-pill frontend">React</span>
+                <span class="badge rounded-pill frontend">Bootstrap</span>
+                <span class="badge rounded-pill backend">Express</span>
+                <span class="badge rounded-pill bg-warning">Docker</span>
+              </div>
+            </div>
+          </div>
+          <div class="card p-3 m-3" style="width: 30rem">
+            <div
+              id="carouselXpreControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./pictures/xpre1.png"
+                    class="d-block w-100"
+                    alt="1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/xpre2.png"
+                    class="d-block w-100"
+                    alt="2"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselXpreControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselXpreControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Xpre - 2022 (Senior Project)</h5>
+              <div class="card-text">
+                <ul>
+                  <li>
+                    Developed a website that converts mind maps to PowerPoint
+                    presentations
+                  </li>
+                  <li>
+                    Front-end developer responsible for designing and
+                    implementing the user interface
+                  </li>
+                  <li>
+                    Allowed users to preview and download them as PPT files
+                  </li>
+                </ul>
+                <span class="badge rounded-pill frontend">Vue3</span>
+                <span class="badge rounded-pill frontend">Bootstrap</span>
+                <span class="badge rounded-pill backend">Laravel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 m-3" style="width: 30rem">
+            <img
+              src="./pictures/aiot.png"
+              class="card-img-top"
+              alt="aiot"
+              style="height: 250px"
+            />
+
+            <div class="card-body">
+              <h5 class="card-title">
+                AIOT Smart Dormitory - 2021 (Independent Study) &nbsp;&nbsp;
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/file/d/18bY14Z4G4_5AeCYrKZ9SOCYZ3ISHA0zs/view?usp=sharing"
+                >
+                  Visit
+                </a>
+              </h5>
+              <div class="card-text">
+                <ul>
+                  <li>
+                    Monitor the usage status of dormitory bathrooms and toilets
+                    through a mobile app
+                  </li>
+                  <li>
+                    Automatically send notifications to administrators if
+                    facilities are used too long
+                  </li>
+                  <li>Used Lora to transmit data to Raspberry Pi</li>
+                </ul>
+                <span class="badge rounded-pill frontend">App inverntor</span>
+                <span class="badge rounded-pill backend">Firebase</span>
+                <span class="badge rounded-pill backend">Arduino</span>
+              </div>
+            </div>
+          </div>
+          <div class="card p-3 m-3" style="width: 30rem">
+            <div
+              id="carouselIdeaskyControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./pictures/ideasky1.png"
+                    class="d-block w-100"
+                    alt="1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./pictures/ideasky3.png"
+                    class="d-block w-100"
+                    alt="3"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselIdeaskyControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselIdeaskyControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                Ideasky Website - 2021&nbsp;&nbsp;
+                <a target="_blank" href="https://ideasky.app/"> Visit </a>
+              </h5>
+              <div class="card-text">
+                <ul>
+                  <li>
+                    My first project, integrated the old version of the official
+                    website with a database and API
+                  </li>
+                  <li>
+                    Redesigned UI and added a django backend management platform
+                  </li>
+                  <li>
+                    Upgraded original Vue2 structure to Vue3 Composition API
+                  </li>
+                </ul>
+                <span class="badge rounded-pill frontend">Vue 3</span>
+                <span class="badge rounded-pill backend">Django</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="article" class="article">
+        <h2 class="text-center py-4">My Article</h2>
+        <p class="text-center">Wherever you walk, you leave traces.</p>
+        <div class="d-flex flex-wrap justify-content-center">
+          <div class="card m-3 p-2">
+            <div class="card-body">
+              <h5 class="card-title">Azure</h5>
+              <div class="card-text">
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/HJQ-aF4T2"
+                    >
+                      Azure 雲端服務</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/S10saVNp3"
+                    >
+                      Azure Web App -靜態部屬 自動化部屬</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/BJAFaVVp2"
+                    >
+                      Azure Registry Container</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/Hyk0TNNah"
+                    >
+                      Azure Web App - ARC docker部屬</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/Hkb2ry_eT"
+                    >
+                      Azure Devops - pipeline 自動化部屬</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/r15gCNEp2"
+                    >
+                      Azure Blob - 存放圖片的好選擇</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card m-3 p-2">
+            <div class="card-body">
+              <h5 class="card-title">Docker</h5>
+              <div class="card-text">
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/Sk50Pq-Rh"
+                    >
+                      Docker 實戰 1 - 五分鐘了解 Docker</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/ryPion-Ch"
+                    >
+                      Docker 實戰 2 - 相關指令與 Dockerfile</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/HyyMSNd1T"
+                    >
+                      Docker 實戰 3 - Docker-compose</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card m-3 p-2">
+            <div class="card-body">
+              <h5 class="card-title">Full-Stack</h5>
+              <div class="card-text">
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/ByD9Jd2ga"
+                    >
+                      JWT 實作認證（上） - 原理介紹</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/rynNZO2g6"
+                    >
+                      JWT 實作認證（下）- React, Node.js</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/H1WWUX3Tn"
+                    >
+                      Google 第三方登入 - React</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/r1CPXQhdp"
+                    >
+                      什麼是Promise物件?</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/Sy5T6Otu6"
+                    >
+                      JavaScript中的Race Condition</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://hackmd.io/@emmmmmma/B1U_ShMD_"
+                    >
+                      Git 入門</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center py-5">
+          <a href="https://hackmd.io/@emmmmmma" target="_blank">
+            <button class="rounded-pill btn btn-lg">See more ...</button>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <footer>Copyright @ 2023-2024 by Emma Chung</footer>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
+      integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+      integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- google analize -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3Z0DY1BD8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-M3Z0DY1BD8');
+    </script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,291 @@
+@charset "UTF-8";
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    /* 初始状态：完全透明，向下位移 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* 结束状态：完全不透明，不位移（正常位置） */
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    /* 初始状态：完全透明，向下位移 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* 结束状态：完全不透明，不位移（正常位置） */
+  }
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #adc6d5;
+    /* 光标闪烁的颜色 */
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #adc6d5;
+    /* 光标闪烁的颜色 */
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+body section.animation-wrapper {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+body section.animation-wrapper section.animation {
+  margin-top: 10vh;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body section.animation-wrapper section.animation .hero {
+  width: 100%;
+  height: 0;
+}
+body section.animation-wrapper section.animation .hero img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+body section.animation-wrapper .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #e8bac0, #e9979e);
+  z-index: -1;
+}
+body .navbar {
+  z-index: 2;
+}
+body main section.main-area {
+  min-height: 60vh;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section.main-area div.info {
+  flex-basis: 500px;
+  padding: 1rem;
+}
+
+/* 首頁文字 預設不延遲 有動畫才會加入.animation-started的class才要延遲 */
+body main section.main-area div.info h1 {
+  font-size: 2.5rem;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid transparent;
+  -webkit-animation: typing 2.5s steps(40, end), blink-caret 2.5s steps(40, end);
+  animation: typing 2.5s steps(40, end), blink-caret 2.5s steps(40, end);
+}
+
+.animation-started main section.main-area div.info h1 {
+  font-size: 2.5rem;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid transparent;
+  -webkit-animation: typing 2.5s 2.2s steps(40, end),
+    blink-caret 2.5s 2.2s steps(40, end);
+  animation: typing 2.5s 2.2s steps(40, end),
+    blink-caret 2.5s 2.2s steps(40, end);
+}
+
+body main section.main-area div.info h2 {
+  font-size: 1.2rem;
+}
+body main section.main-area div.info a {
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+body main section.main-area div.info a:hover {
+  transform: scale(1.2);
+}
+
+/* 首頁圖片 預設不延遲 有動畫才會加入.animation-started的class才要延遲 */
+body main section.main-area div.img-area {
+  flex-basis: 500px;
+  opacity: 0;
+  -webkit-animation: fadeIn 1.5s ease-in-out forwards;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  /* 设置动画名称、时间和动画结束后保持最终状态 */
+  transform: translateY(50px);
+}
+
+.animation-started main section.main-area div.img-area {
+  flex-basis: 500px;
+  opacity: 0;
+  -webkit-animation: fadeIn 1.5s 2.2s ease-in-out forwards;
+  animation: fadeIn 1.5s 2.2s ease-in-out forwards;
+  /* 设置动画名称、时间和动画结束后保持最终状态 */
+  transform: translateY(50px);
+}
+
+body main section.main-area div.img-area img {
+  width: 100%;
+  padding: 20px;
+}
+body main section.about-me {
+  background-color: #e8bac0;
+  padding: 3rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+body main section.about-me section.description {
+  width: 60%;
+  text-align: center;
+}
+body main section.about-me section.description h2 {
+  font-size: 2rem;
+}
+body main section.about-me section.description .progress-bar-area p {
+  margin-top: 1rem;
+}
+body main section.myproject {
+  padding: 3rem 0rem;
+}
+body main section.myproject h2 {
+  text-align: center;
+}
+body main section.myproject .project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section.myproject .project .card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+body main section.myproject .project .animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+body main section.myproject .project .frontend {
+  background-color: #adc6d5;
+}
+body main section.myproject .project .backend {
+  background-color: #e8bac0;
+}
+body main section.myproject div img {
+  max-height: 250px;
+  height: auto;
+}
+body main section.article {
+  padding: 3rem 0;
+}
+body main section.article .card {
+  background-color: #e7eef3;
+}
+body main section.article .btn {
+  background-color: #adc6d5;
+  color: white;
+  --bs-btn-border-width: none;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  height: 40px;
+}
+
+/* 固定carousel高度 避免圖片跑版 */
+.carousel-inner {
+  height: 250px;
+  overflow: hidden; /* 裁切超出容器的部分 */
+}
+
+.carousel-inner img {
+  width: auto; /* 自動調整圖片寬度 */
+  height: 100%; /* 圖片高度填滿容器 */
+  object-fit: cover; /* 自動裁切圖片以填滿容器 */
+}
+
+@media screen and (max-width: 800px) {
+  body main section.about-me section.description {
+    width: 80%;
+  }
+  body main section.resume {
+    overflow-x: auto;
+  }
+  body main section.resume section.picture div.greenRect,
+  body main section.resume section.picture div.greenRect2,
+  body main section.resume section.picture div.greenRect3 {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  body nav {
+    position: static;
+  }
+  body nav ul {
+    flex-direction: column;
+  }
+} /*# sourceMappingURL=style.css.map */
